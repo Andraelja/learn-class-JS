@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method di Class</title>
+</head>
+<body>
+    <script>
+
+        class Karyawan {
+            constructor (nama, gaji){
+                this.nama = nama;
+                this.gaji = gaji;
+            }
+            hitungBonus = function (){
+                return this.gaji * 0.1
+            }
+        }
+
+        const andra = new Karyawan ("Andra", 10000000)
+        console.log(`Nama karyawan: ${andra.nama} dan Bonus: ${andra.hitungBonus()}`)
+
+    </script>
+</body>
+</html>

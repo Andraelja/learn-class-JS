@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Private Method</title>
+</head>
+<body>
+    <script>
+
+        class Counter{
+            #count;
+
+            constructor(initialCount){
+                this.#count = initialCount
+            }
+            #increment(){
+                 this.#count++
+            }
+            increase(){
+                this.#increment();
+                 return this.#count;
+            }
+            #reset(){
+                 this.#count = 0;
+            }
+            resetCount(){
+                 this.#reset();
+            }
+            
+        }
+
+        const counter = new Counter(5);
+        
+        console.log(counter.increase()); // Output: 6
+        console.log(counter.increase()); // Output: 7
+        counter.resetCount();
+        console.log(counter.increase()); // Output: 1
+
+
+
+    </script>
+</body>
+</html>

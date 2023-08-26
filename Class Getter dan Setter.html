@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Getter dan Setter</title>
+</head>
+<body>
+    <script>
+
+        class Person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            get nama(){
+                return `${name}`
+            }
+
+            get umur(){
+                return `${age}`
+            }
+
+            set umur(value){
+                const result = value.split(" ")
+            }
+            
+        }
+
+        const person1 = new Person("Alice", 130)
+        console.log(person1.name)
+        console.log(person1.age)
+
+    </script>
+</body>
+</html>

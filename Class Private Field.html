@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Private Field</title>
+</head>
+<body>
+    <script>
+
+        class Person {
+
+            #name;
+            #age
+
+            constructor(name, age){
+                this.#name = name
+                this.#age = age;
+            }
+
+            getInfo(){
+                console.log(`Nama : ${this.#name} Usia : ${this.#age}`)
+            }
+
+            birthday(){
+                this.#age++
+            }
+        }
+
+        const person = new Person("Andra", 19);
+        console.log(person.getInfo())
+        person.birthday()
+        console.log(person.getInfo())
+
+
+    </script>
+</body>
+</html>
